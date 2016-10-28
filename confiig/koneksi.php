@@ -11,8 +11,8 @@ $koneksi = mysqli_connect($server, $user,$password,$database);
 
 if ($koneksi){
     
-    echo "ditemukan";
+    echo "dijumpai";
 }
 else {
-    echo "tidak ditemukan";
+    echo "tidak dijumpai";
 }
