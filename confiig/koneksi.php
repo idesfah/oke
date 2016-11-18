@@ -2,10 +2,10 @@
 
 // Author Desfah Iriadi
 
-$server = "localhost" ;
-$user = "root";
-$password = "";
-$database = "leason";
+$server     = "localhost" ;
+$user       = "root";
+$password   = "";
+$database   = "leason";
 
 $koneksi = mysqli_connect($server, $user,$password,$database);
 
