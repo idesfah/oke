@@ -6,7 +6,7 @@
         <link href="assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/flat-ui.min.css" rel="stylesheet" type="text/css"/>
         <script src="assets/js/vendor/jquery.min.js" type="text/javascript"></script>
-         <script src="assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/js/vendor/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/flat-ui.min.js" type="text/javascript"></script>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -14,17 +14,27 @@
         <div class="container" >
             <h2>PERTEMUAN SATU OKE</h2><hr/>	
             <?php
-             
             session_start();
             include 'menu.php';
             if (isset($_SESSION["login"])) {
-                echo"Welcome";
-                echo'<a href="logout.php" class=btn btn-lg btn-danger">logout</a>';
-            } else {
 
-                include 'login.php';
-            }
-            ?>
+
+                echo"Welcome";
+                echo'<a href = "logout.php" class = btn btn-lg btn-danger">logout</a>';
+            } else {
+                ?>
+                <div id="dsf" class="col-md-12"> 
+                    <?php
+                    if (isset($_GET['menu'])) {
+                        switch ($_GET['menu']) {
+                            case 1 : include './register.php';
+                        }
+                    } else {
+                        include 'login.php';
+                    }
+                }
+                ?>
+            </div>
         </div>
     </body>
 </html>

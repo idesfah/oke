@@ -9,10 +9,13 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse-01">
 
-
+<?php
+                if (!isset($_SESSION["login"])) {
+                    ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.php">Daftar</a></li>
+                    <li><a href="index.php?menu=1">Daftar</a></li>
                 </ul>
+                <?php }?>
                 <?php
                 if (isset($_SESSION["login"])) {
                     ?>

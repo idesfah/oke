@@ -16,5 +16,5 @@ if ($data > 0) {
 //    var_dump($_SESSION);
     header("location:index.php");
 } else {
-    header("location:index.php");
+    header("location:index.php?login=0");
 }
